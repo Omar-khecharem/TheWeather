@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# TheWeather
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A professional weather dashboard with geometric design, internationalization, and real-time weather data. Built with React, Tailwind CSS, and Open-Meteo API.
 
-## Available Scripts
+![TheWeather Dashboard](public/logo192.png)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Real-time weather** — current conditions, temperature, humidity, wind, UV index, air quality
+- **7-day forecast** — daily highs/lows with weather icons and wind info
+- **Hourly forecast** — next 8 hours with temperature and wind trends
+- **Geolocation** — auto-detect your location on load
+- **City search** — search any city worldwide with autocomplete geocoding
+- **Geometric design** — art-deco inspired layout with diamonds, triangles, and grid patterns
+- **International (i18n)** — English, French, Arabic with full RTL support
+- **Responsive** — optimized for mobile, tablet, and desktop
+- **Accessible** — keyboard navigation, screen reader support, reduced motion support
+- **Loading skeletons** — smooth loading state with geometric skeleton placeholders
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Tech | Purpose |
+|------|---------|
+| React 19 | UI framework |
+| Tailwind CSS 3 | Styling |
+| Open-Meteo API | Weather data (free, no key needed) |
+| Nominatim API | Reverse geocoding |
+| i18next | Internationalization |
+| Axios | HTTP client |
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js 18+
+- npm 9+
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/Omar-khecharem/TheWeather.git
+cd TheWeather
+npm install --legacy-peer-deps
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app will open at `http://localhost:3000`.
 
-### `npm run eject`
+### Build for production
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Serve the `build/` folder with any static server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── components/          # React components
+│   ├── Navbar.jsx       # Top navigation with clock, location, language switcher
+│   ├── SearchBar.jsx    # City search input
+│   ├── CurrentWeather.jsx  # Main weather card with all current metrics
+│   ├── HourlyForecast.jsx  # Hourly weather cards
+│   ├── WeatherGrid.jsx     # 7-day forecast grid
+│   ├── GeoPattern.jsx      # SVG geometric patterns (diamonds, triangles, dots, grid)
+│   ├── GeoDivider.jsx      # Geometric dividers between sections
+│   └── SkeletonLoader.jsx  # Loading skeleton
+├── hooks/
+│   └── useWeather.js    # Custom hook for weather data fetching
+├── utils/
+│   ├── weatherApi.js    # API calls (Open-Meteo, Nominatim)
+│   └── weatherCodes.js  # WMO weather code mapping to icons/labels
+├── locales/             # i18n translation files
+│   ├── en.json
+│   ├── fr.json
+│   └── ar.json
+├── i18n.js              # i18next configuration
+├── App.js               # Main app component
+├── App.css              # Global styles
+├── index.js             # Entry point
+├── index.css            # Tailwind directives
+├── config.js            # API URLs
+└── tailwind.config.js   # Tailwind configuration
+```
 
-## Learn More
+## Branch Strategy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Branch | Purpose |
+|--------|---------|
+| `main` | Production-ready stable code |
+| `develop` | Integration branch for features |
+| `feature/geometric-design` | Geometric UI patterns and visual design |
+| `feature/i18n` | Internationalization (EN, FR, AR) |
+| `feature/weather-api` | Weather API integration (Open-Meteo) |
+| `feature/skeleton-loader` | Loading skeleton components |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API Reference
 
-### Code Splitting
+This project uses **free, no-key-required** APIs:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Open-Meteo** — `https://api.open-meteo.com/v1/forecast` — current weather, hourly & daily forecast
+- **Open-Meteo Geocoding** — `https://geocoding-api.open-meteo.com/v1/search` — city name to coordinates
+- **Nominatim (OSM)** — `https://nominatim.openstreetmap.org/reverse` — reverse geocoding (coordinates to city name)
+- **Open-Meteo Air Quality** — `https://air-quality-api.open-meteo.com/v1/air-quality` — European AQI
 
-### Analyzing the Bundle Size
+## Internationalization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Switch languages via the **EN / FR / AR** buttons in the top-right corner.
 
-### Making a Progressive Web App
+- Arabic (AR) enables full RTL layout
+- Language is detected from browser settings on first visit
+- Translations are stored in `src/locales/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Design System
 
-### Advanced Configuration
+- **Background**: `#f0f2f8` (light gray)
+- **Cards**: `#ffffff` (white) with subtle shadows
+- **Text**: `#1a1a2e` (dark purple-gray)
+- **Accent**: `#6C5CE7 → #a29bfe` (purple gradient)
+- **Geometric patterns**: SVG-based diamond, triangle, dot, and grid patterns
+- **Typography**: Inter + Poppins font family
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Accessibility
 
-### Deployment
+- All interactive elements have `aria-label` / `aria-pressed` attributes
+- Language buttons use native `lang` attribute
+- `prefers-reduced-motion` disables all animations
+- Semantic HTML (`<header>`, `<nav>`, `<main>`, `<footer>`)
+- Keyboard navigable search and language controls
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+MIT
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+
+**Omar Khecharem** — [GitHub](https://github.com/Omar-khecharem)

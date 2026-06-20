@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "today": "Aujourd'hui",
+    "week": "Semaine",
+    "month": "Mois"
+  },
+  "search": {
+    "placeholder": "Rechercher une ville..."
+  },
+  "weather": {
+    "feelsLike": "Ressenti",
+    "humidity": "Humidité",
+    "wind": "Vent",
+    "pressure": "Pression",
+    "uvIndex": "Indice UV",
+    "visibility": "Visibilité",
+    "sunrise": "Lever",
+    "sunset": "Coucher",
+    "high": "H",
+    "low": "B",
+    "airQuality": "Qualité de l'air",
+    "good": "Bonne",
+    "fair": "Moyenne",
+    "moderate": "Modérée",
+    "poor": "Mauvaise",
+    "veryPoor": "Très mauvaise"
+  },
+  "forecast": {
+    "hourly": "Prévisions horaires",
+    "weekly": "Prévisions 7 jours"
+  },
+  "units": {
+    "celsius": "°C",
+    "kmh": "km/h",
+    "hPa": "hPa",
+    "km": "km",
+    "percent": "%"
+  },
+  "loading": "Chargement...",
+  "error": "Ville introuvable. Veuillez réessayer."
+}

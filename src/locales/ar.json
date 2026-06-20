@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "today": "اليوم",
+    "week": "الأسبوع",
+    "month": "الشهر"
+  },
+  "search": {
+    "placeholder": "ابحث عن مدينة..."
+  },
+  "weather": {
+    "feelsLike": "يشعر وكأنه",
+    "humidity": "الرطوبة",
+    "wind": "الرياح",
+    "pressure": "الضغط",
+    "uvIndex": "مؤشر الأشعة",
+    "visibility": "الرؤية",
+    "sunrise": "الشروق",
+    "sunset": "الغروب",
+    "high": "العظمى",
+    "low": "الصغرى",
+    "airQuality": "جودة الهواء",
+    "good": "جيدة",
+    "fair": "مقبولة",
+    "moderate": "متوسطة",
+    "poor": "سيئة",
+    "veryPoor": "سيئة جداً"
+  },
+  "forecast": {
+    "hourly": "التوقعات الساعية",
+    "weekly": "توقعات 7 أيام"
+  },
+  "units": {
+    "celsius": "°C",
+    "kmh": "كم/س",
+    "hPa": "هكتوباسكال",
+    "km": "كم",
+    "percent": "%"
+  },
+  "loading": "جار التحميل...",
+  "error": "المدينة غير موجودة. حاول مرة أخرى."
+}

@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "today": "Today",
+    "week": "Week",
+    "month": "Month"
+  },
+  "search": {
+    "placeholder": "Search city..."
+  },
+  "weather": {
+    "feelsLike": "Feels Like",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "pressure": "Pressure",
+    "uvIndex": "UV Index",
+    "visibility": "Visibility",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "high": "H",
+    "low": "L",
+    "airQuality": "Air Quality",
+    "good": "Good",
+    "fair": "Fair",
+    "moderate": "Moderate",
+    "poor": "Poor",
+    "veryPoor": "Very Poor"
+  },
+  "forecast": {
+    "hourly": "Hourly Forecast",
+    "weekly": "7-Day Forecast"
+  },
+  "units": {
+    "celsius": "°C",
+    "kmh": "km/h",
+    "hPa": "hPa",
+    "km": "km",
+    "percent": "%"
+  },
+  "loading": "Loading...",
+  "error": "City not found. Please try again."
+}
